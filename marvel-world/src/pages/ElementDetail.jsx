@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Box, Typography, Card, CardMedia } from "@mui/material";
 import { getPersonajesById } from "../api/characters";
 import { getComicsById } from "../api/comics";
-import RelatedComics from "../components/detailComponents/RelatedComics";
 import { colors } from "../styles/colors";
 const ElementDetail = () => {
+  const RelatedComics = lazy(() =>
+    import("../components/detailComponents/RelatedComics")
+  );
+
   const { state, pathname } = useLocation();
   const [elementDetail, setElementDetail] = useState({});
 
@@ -24,7 +27,6 @@ const ElementDetail = () => {
     } else {
       setElementDetail(state.element);
     }
-    console.log(state.element);
   }, []);
 
   return (
@@ -63,10 +65,11 @@ const ElementDetail = () => {
           ? elementDetail.description
           : `Ups, there's no description!`}
       </Typography>
-
-      {dataType === "personajes" && (
-        <RelatedComics comics={elementDetail.comics?.items} />
-      )}
+      <Suspense>
+        {dataType === "personajes" && (
+          <RelatedComics comics={elementDetail.comics?.items} />
+        )}
+      </Suspense>
     </Box>
   );
 };

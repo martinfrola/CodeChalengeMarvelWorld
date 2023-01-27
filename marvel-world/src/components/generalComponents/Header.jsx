@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import {
   Box,
-  TextField,
   List,
   ListItem,
   ListItemButton,
@@ -15,7 +14,6 @@ const Header = ({ setType }) => {
   const navItems = ["personajes", "comics"];
 
   const changeType = (newType) => {
-    console.log(newType, "Desde el Header");
     setType(newType);
   };
 
@@ -46,11 +44,13 @@ const Header = ({ setType }) => {
           {navItems.map((item) => (
             <ListItem key={item} disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText
-                  sx={{ color: "white" }}
-                  primary={item === "personajes" ? "Personajes" : "Comics"}
-                  onClick={() => changeType(item)}
-                />
+                <Link to="/" state={{ dataType: item }}>
+                  <ListItemText
+                    sx={{ color: "white" }}
+                    primary={item === "personajes" ? "Personajes" : "Comics"}
+                    onClick={() => changeType(item)}
+                  />
+                </Link>
               </ListItemButton>
             </ListItem>
           ))}

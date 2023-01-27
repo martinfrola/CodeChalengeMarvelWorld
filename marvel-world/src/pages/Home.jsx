@@ -12,7 +12,7 @@ import {
   Paper,
   InputBase,
 } from "@mui/material";
-import Carrousel from "../components/generalComponents/Carrousel";
+import Carrousel from "../components/homeComponents/Carrousel";
 import SearchIcon from "@mui/icons-material/Search";
 const Home = () => {
   const dataType = useOutletContext();
