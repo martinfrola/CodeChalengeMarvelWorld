@@ -24,7 +24,7 @@ const Footer = () => {
           https://developer.marvel.com/{" "}
         </Link>
       </Typography>
-      <Typography>by Martín Frola</Typography>
+      <Typography>by Martin Frola</Typography>
     </Box>
   );
 };
