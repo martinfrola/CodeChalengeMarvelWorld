@@ -60,7 +60,7 @@ const ElementDetail = () => {
       <Typography variant="h5" sx={{ marginTop: 5, marginBottom: 2 }}>
         Description
       </Typography>
-      <Typography variant="p" sx={{ marginBottom: 5 }}>
+      <Typography variant="body1" sx={{ marginBottom: 5 }}>
         {elementDetail.description !== ""
           ? elementDetail.description
           : `Ups, there's no description!`}
