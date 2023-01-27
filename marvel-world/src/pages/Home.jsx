@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { getAllCharacters } from "../api/characters";
 import { getAllComics } from "../api/comics";

@@ -1,11 +1,12 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
-import Footer from "../components/generalComponents/Footer";
 import Header from "../components/generalComponents/Header";
 import "../styles/main.css";
 
 const Layout = () => {
+  const Footer = lazy(() => import("../components/generalComponents/Footer"));
+
   const [dataType, setDataType] = useState("personajes");
 
   const changeType = (newType) => {
@@ -14,11 +15,13 @@ const Layout = () => {
 
   return (
     <div className="app-container">
-      <Header setType={(data) => changeType(data)} />
-      <div className="main">
-        <Outlet context={dataType} />
-      </div>
-      <Footer />
+      <Suspense>
+        <Header setType={(data) => changeType(data)} />
+        <div className="main">
+          <Outlet context={dataType} />
+        </div>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
