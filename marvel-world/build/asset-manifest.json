@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.98345299.css",
+    "main.js": "/static/js/main.8e3ea33d.js",
+    "static/js/236.6a73d8b3.chunk.js": "/static/js/236.6a73d8b3.chunk.js",
+    "static/js/470.4a11e7a9.chunk.js": "/static/js/470.4a11e7a9.chunk.js",
+    "static/media/carrusel1.jpg": "/static/media/carrusel1.ad051130df8ff0486ac9.jpg",
+    "static/media/carrusel6.jpg": "/static/media/carrusel6.f103417f301e1d702a80.jpg",
+    "static/media/carrusel2.jpg": "/static/media/carrusel2.1d0bcf9fe05f3be304da.jpg",
+    "static/media/carrusel3.jpg": "/static/media/carrusel3.d3b4a8d4c1bb8a92fed4.jpg",
+    "static/media/Marvel_Logo.svg.png": "/static/media/Marvel_Logo.svg.c62c859021025ac58899.png",
+    "static/media/carrusel4.jpg": "/static/media/carrusel4.355b929c02a85e641014.jpg",
+    "static/media/carrusel5.jpg": "/static/media/carrusel5.2d51babbb7e15b87166e.jpg",
+    "index.html": "/index.html",
+    "main.98345299.css.map": "/static/css/main.98345299.css.map",
+    "main.8e3ea33d.js.map": "/static/js/main.8e3ea33d.js.map",
+    "236.6a73d8b3.chunk.js.map": "/static/js/236.6a73d8b3.chunk.js.map",
+    "470.4a11e7a9.chunk.js.map": "/static/js/470.4a11e7a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98345299.css",
+    "static/js/main.8e3ea33d.js"
+  ]
+}
