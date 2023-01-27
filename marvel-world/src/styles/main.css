@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+
+.link-card {
+  text-decoration: none;
+}
+
+.main {
+  min-height: calc(100vh - 64px - 124px);
+}
